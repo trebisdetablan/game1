@@ -1,0 +1,274 @@
+/* General Styling */
+body, h1, h2, h3, p {
+    font-family: Helvetica, Arial, sans-serif; /* Sets a clean font family */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+a {
+    text-decoration: none; /* Removes underline from links */
+}
+
+body {
+    background-color: #f4f4f4; /* Light background color for the whole page */
+}
+
+/* View Container */
+.viewCont {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    min-height: 100vh; /* Ensure the container takes up at least full viewport height */
+}
+
+/* Navbar Styling */
+.navbar {
+    border-radius: 20px; /* Rounded corners */
+    background-color: black; /* Black background for navbar */
+    color: white; /* White text */
+    width: 200px; /* Fixed width for the sidebar */
+    height: 100%; /* Full height */
+    margin: 10px; /* Some margin for spacing */
+    padding: 20px; /* Padding inside navbar */
+    overflow-y: auto; /* Scroll if content overflows */
+    flex-shrink: 0; /* Prevent navbar from shrinking */
+}
+
+.navbar h1 {
+    text-align: center; /* Center the heading */
+    font-size: 24px; /* Set font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.navbar div {
+    display: flex; /* Flexbox layout for each menu item */
+    align-items: center; /* Vertically align items */
+    padding: 10px; /* Padding for each item */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between items */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.navbar div p {
+    font-weight: bold; /* Bold text for the item label */
+    margin-left: 10px; /* Space between icon and label */
+}
+
+.navbar div img {
+    width: 25px; /* Fixed size for icons */
+}
+
+.navbar .active {
+    background-color: white; /* Highlight active item with white background */
+    color: black; /* Change text color to black */
+}
+
+.navbar div:hover {
+    border: 2px solid white; /* Add a white border on hover */
+    transition: border 0.1s ease; /* Smooth transition for border */
+}
+
+.navbar .active:hover {
+    background-color: #c0c0c0; /* Change background when hovered over active item */
+    transition: background-color 0.1s ease; /* Smooth background color change */
+}
+
+/* Main Content */
+.main {
+    flex-grow: 1; /* Main content takes up remaining space */
+    padding: 20px; /* Padding inside main content */
+    background-color: white; /* White background for main area */
+    border-radius: 15px; /* Rounded corners */
+    margin-left: 20px; /* Space between navbar and main content */
+}
+
+.main h1 {
+    font-size: 32px; /* Set font size for the main heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Categories Section */
+.categories {
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Arrange items in a horizontal row */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between buttons */
+    width: 100%; /* Ensure it takes up full width */
+}
+
+/* Button Styling */
+.catButton {
+    background-color: #4CAF50; /* Green button */
+    color: white; /* White text */
+    font-size: 16px; /* Font size for button text */
+    padding: 10px 20px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    flex: none; /* Prevent buttons from stretching */
+    width: auto; /* Keep buttons sized to their content */
+}
+
+/* Hover Effect */
+.catButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Active Button State */
+.catButton.active {
+    background-color: #333; /* Dark color when active */
+}
+
+/* Flexbox Layout for Form & Categories */
+.container {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between items */
+    margin-top: 20px; /* Margin above container */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .categories {
+        width: 100%; /* Full width for categories on smaller screens */
+    }
+
+    form {
+        width: 90%; /* Form takes up 90% of screen on smaller devices */
+    }
+}
+
+/* Menu Content */
+.menu-content {
+    flex-grow: 1; /* Fill remaining space */
+    padding: 20px; /* Padding inside content */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+.menu-content h2 {
+    font-size: 28px; /* Set font size for subheadings */
+    margin-bottom: 20px; /* Space below the subheading */
+}
+
+.menu-content p {
+    font-size: 16px; /* Set font size for paragraphs */
+    color: #555; /* Dark gray text */
+}
+
+/* Form Styling */
+form, .production-runs-container {
+    width: 60%; /* Form and container take up 60% of screen */
+    margin: auto; /* Center horizontally */
+    padding: 20px; /* Padding inside form */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+label {
+    font-size: 16px; /* Font size for labels */
+    font-weight: bold; /* Bold text for labels */
+    display: block; /* Block display for labels */
+    margin-bottom: 8px; /* Space below labels */
+}
+
+input[type="number"], input[type="text"], input[type="url"]  {
+    width: 100%; /* Full width for input */
+    padding: 8px; /* Padding inside input */
+    margin-bottom: 15px; /* Space below input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Set font size */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Green background for submit button */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Set font size */
+    width: 100%; /* Full width for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Production Runs */
+.production-runs-container {
+    display: flex; /* Flexbox layout for production runs section */
+    justify-content: space-between; /* Space between left and right sections */
+    padding: 20px; /* Padding inside container */
+}
+
+.production-runs-container .left-section,
+.production-runs-container .right-section {
+    width: 48%; /* Each section takes up 48% of container */
+}
+
+.production-runs-container table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.production-runs-container th, .production-runs-container td {
+    padding: 8px; /* Padding inside table cells */
+    text-align: left; /* Left align text */
+    border: 1px solid #ddd; /* Light border for cells */
+}
+
+.production-runs-container th {
+    background-color: #f4f4f4; /* Light gray background for header */
+}
+
+.production-runs-container td a {
+    color: #007bff; /* Blue links */
+    text-decoration: none; /* Remove underline */
+}
+
+.production-runs-container td a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Toggle Buttons */
+.button-container {
+    display: flex; /* Flexbox layout for toggle buttons */
+    justify-content: space-between; /* Space between buttons */
+    margin-bottom: 20px; /* Space below buttons */
+}
+
+.toggle-btn {
+    padding: 10px 20px; /* Padding inside button */
+    margin-bottom: 10px;
+    font-size: 16px; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border */
+    background-color: #f1f1f1; /* Light gray background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.toggle-btn:hover {
+    background-color: #ddd; /* Darker gray on hover */
+}
+
+.toggle-btn.active {
+    background-color: #4CAF50; /* Green background for active button */
+    color: white; /* White text for active button */
+}
+
+/* Hide/Show Sections */
+.new-production-form,
+.previous-productions {
+    display: none; /* Hide both sections initially */
+}
+
+.new-production-form.active,
+.previous-productions.active {
+    display: block; /* Show active section */
+}

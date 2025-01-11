@@ -1,0 +1,57 @@
+h1, h2, h3, p {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 90%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+
+.config {
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: white; 
+    color: black;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px; 
+}
+
+.research, .index, .logistics {
+    border-radius: 5px;
+    padding-left: 5px;
+    color: white;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.research:hover, .index:hover, .logistics:hover {
+    border: 2px solid white; /* Adds a white border */
+    transition: border 0.1s ease; /* Smooth transition effect */
+}
+
+.navbar div p {
+    font-weight: bold;
+}
+
+.navbar div img {
+    width: 25px;
+    height: auto;
+}
